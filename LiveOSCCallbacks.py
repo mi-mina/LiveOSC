@@ -495,6 +495,7 @@ class LiveOSCCallbacks:
                 self.oscEndpoint.sendMessage(bundle)
                 clipNumber = 0
                 trackNumber = trackNumber + 1
+            self.oscEndpoint.send("/live/name/clip/done", "bundle sended")
             return
         #Requesting a single clip name
         if len(msg) == 4:
